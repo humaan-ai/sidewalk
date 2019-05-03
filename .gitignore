@@ -19,5 +19,5 @@ node_modules
 .DS_Store
 
 # Gatsby
-.cache
-public
+www/.cache
+www/public
