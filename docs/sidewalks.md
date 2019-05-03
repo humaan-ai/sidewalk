@@ -21,5 +21,4 @@ The street furniture zone is defined as the section of the sidewalk between the 
 The enhancement or buffer zone is defined as the space immediately next to the sidewalk, and may consist of a variety of different elements. These include curb extensions, parklets, stormwater management features, parking, cycle racks, cycle share stations, and curbside cycle tracks.
 
 ## References
----
 1. Sidewalks, [Global Design Cities Initiative](https://globaldesigningcities.org/publication/global-street-design-guide/designing-streets-people/designing-for-pedestrians/sidewalks/)
