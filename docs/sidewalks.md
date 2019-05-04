@@ -6,7 +6,7 @@ Just as roadway expansions and improvements have historically enhanced travel fo
 
 Curb cuts for vehicle access should be limited in areas with high pedestrian volumes, and when unavoidable, they must maintain accessible levels, slopes, and clear path minimums.
 
-![Global Designing Cities Initiative](src/Sidewalk-Zones.png)
+![Global Designing Cities Initiative](assets/Sidewalk-Zones.png)
 
 ### 1. Frontage Zone
 The frontage zone defines the section of the sidewalk that functions as an extension of the building, whether through entryways and doors or sidewalk cafés and sandwich boards. The frontage zone consists of both the facade of the building fronting the street and the space immediately adjacent to the building.
