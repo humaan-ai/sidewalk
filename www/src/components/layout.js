@@ -33,11 +33,11 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <main>{children}</main>
+          <main style={{marginTop: 80, marginBottom: 80}}>{children}</main>
           <footer style={{borderTop: '1px solid #e1e1e1', padding: `15px 0`}}>
             © {new Date().getFullYear()}, Sidewalk | 
             {` `}
-            <a href="https://humaan.ai/labs">Humaan Cities</a>
+            <a href="https://humaan.ai">Humaan.ai</a>
           </footer>
         </div>
       </>
