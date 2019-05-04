@@ -2,19 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <p style={{lineHeight: 1.5}}>A sidewalk (American English) or pavement (British English), also known as a footpath or footway, is a path along the side of a road. A sidewalk may accommodate moderate changes in grade (height) and is normally separated from the vehicular section by a curb. There may also be a median strip or road verge (a strip of vegetation, grass or bushes or trees or a combination of these) either between the sidewalk and the roadway or between the sidewalk and the boundary.</p>
   </Layout>
 )
 
