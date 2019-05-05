@@ -5,13 +5,14 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
+      position: `fixed`,
       background: `#ffcf2b`,
-      marginBottom: `1.45rem`,
-      padding: `1.45rem 3.75rem`,
+      padding: `1rem 2rem`,
       display: `flex`,
       justifyContent: `space-between`,
       alignItems: `center`,
       width: `100%`,
+      top: 0,
     }}
   >
     <div
@@ -33,9 +34,9 @@ const Header = ({ siteTitle }) => (
     </div>
     <nav className="nav">
       <ul>
-        <li><Link to="/proposal/">Proposal</Link></li>
-        <li><Link to="/">Docs</Link></li>
-        <li><Link to="/">Contribute</Link></li>
+        <li><Link to="">Proposal</Link></li>
+        <li><Link to="/docs">Docs</Link></li>
+        <li><Link to="/contribute">Contribute</Link></li>
       </ul>
     </nav>
   </header>

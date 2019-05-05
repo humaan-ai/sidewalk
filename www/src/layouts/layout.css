@@ -666,3 +666,6 @@ pre tt:after {
 .nav li {
   margin: 0 20px;
 }
+.nav li:last-child {
+  margin-right: 0; 
+}

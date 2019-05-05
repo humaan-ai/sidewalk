@@ -9,7 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -34,12 +35,8 @@ const Layout = ({ children }) => (
           }}
         >
           <main style={{marginTop: 80, marginBottom: 80}}>{children}</main>
-          <footer style={{borderTop: '1px solid #e1e1e1', padding: `15px 0`}}>
-            © {new Date().getFullYear()}, Sidewalk | 
-            {` `}
-            <a href="https://humaan.ai">Humaan.ai</a>
-          </footer>
         </div>
+        <Footer />
       </>
     )}
   />
