@@ -13,6 +13,7 @@ const Header = ({ siteTitle }) => (
       alignItems: `center`,
       width: `100%`,
       top: 0,
+      flexShrink: 0,
     }}
   >
     <div

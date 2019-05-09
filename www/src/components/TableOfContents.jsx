@@ -5,13 +5,13 @@ import styled from 'styled-components'
 const ChapterList = ({ chapter, source, sections, level = 0 }) => (
   <ChapterListItem>
     {chapter && (
-      <Link to={source}>{chapter}</Link>
+      <Link to={source} activeStyle={{ color: "#ecba28" }}>{chapter}</Link>
     )}
     {sections && (
-        <ul>
+        <ul style={{marginBottom: `calc(1.45rem / 2)`}}>
           {sections.map((section, index) => (
               <li key={index}>
-                <Link to={section.source}>{section.title}</Link>
+                <Link to={section.source} activeStyle={{ color: "#ecba28" }}>{section.title}</Link>
               </li>
           ))}
         </ul>
@@ -28,7 +28,6 @@ const TableOfContents = ({ contents }) => (
 export default TableOfContents
 
 const TOCWrapper = styled.ul`
-  padding: ${props => props.theme.sitePadding};
   margin: 0;
 `
 
@@ -43,5 +42,5 @@ const EntryTitle = styled.h6`
 `
 
 const ChapterListItem = styled.li`
-  margin: 0;
+  margin: 15px 0;
 `

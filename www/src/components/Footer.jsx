@@ -5,6 +5,8 @@ const Footer = () => (
         style={{ 
             borderTop: '1px solid #e1e1e1', 
             padding: `1rem 2rem`, 
+            height: `50`,
+            flexShrink: 0,
             }}
     >
         © {new Date().getFullYear()}, Sidewalk |

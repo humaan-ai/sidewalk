@@ -9,11 +9,17 @@ import "./proposal.css"
 
 export default class ProposalTemplate extends React.Component {
   render() {
+    const contentNode = this.props.data.contentBySlug
     return (
-      <div>
+      <div style={{
+        display: `flex`,
+        flexDirection: `column`,
+        height: `100vh`,
+      }}>
         <Header siteTitle="Sidewalk" />
         <div style={{
           padding: `6.5rem 2rem 5rem`,
+          flex: `1 0 auto`
         }}
         >
           <div style={{
@@ -33,7 +39,7 @@ export default class ProposalTemplate extends React.Component {
             padding: `4.25rem 3.75rem`,
           }}
           >
-            Content
+            <div dangerouslySetInnerHTML={{__html: contentNode.html}} />
           </div>
         </div>
         <Footer />
@@ -44,7 +50,13 @@ export default class ProposalTemplate extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query Proposal {
+  query Proposal($slug: String!) {
+    contentBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
     tableOfContents: proposalJson {
       id
       contents {
