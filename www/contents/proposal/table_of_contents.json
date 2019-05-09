@@ -1,0 +1,47 @@
+{
+  "id": "table-of-contents",
+  "contents": [
+    {
+      "chapter": "1. Project Summary",
+      "source": "/proposal/project-summary",
+      "sections": [
+        {
+          "title": "1.1 Background",
+          "source": "/proposal/background"
+        },
+        {
+          "title": "1.2 Problem Statement",
+          "source": "/proposal/problem-statement"
+        },
+        {
+          "title": "1.3 Objectives",
+          "source": "/proposal/objectives"
+        }
+      ]
+    },
+    {
+      "chapter": "2. Project Description",
+      "source": "/proposal/project-description",
+      "sections": [
+        {
+          "title": "1.1 Methodology",
+          "source": "/proposal/methodology"
+        },
+        {
+          "title": "1.2 Limitations",
+          "source": "/proposal/limitations"
+        }
+      ]
+    }, 
+    {
+      "chapter": "3. Conclusions",
+      "source": "/proposal/conclusions"
+    },
+    {
+      "chapter": "4. Bibliography",
+      "source": "/proposal/bibliography"
+    }
+  ]
+}
+
+

@@ -17,7 +17,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`
+      if (
+        Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+        Object.prototype.hasOwnProperty.call(node.frontmatter, 'type')
+      ) {
+        if (node.frontmatter.type == 'proposal') {
+          slug = `/proposal/${_.kebabCase(node.frontmatter.title)}`
+        } else {
+          slug = `/docs/${_.kebabCase(node.frontmatter.title)}`
+        }
+      } else {
+        slug = `/${_.kebabCase(node.frontmatter.title)}`
+      }
     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
     } else if (parsedFilePath.dir === '') {
@@ -70,11 +81,7 @@ exports.createPages = ({ graphql, actions }) => {
             })
           }
 
-          if (edge.node.frontmatter.category) {
-            categorySet.add(edge.node.frontmatter.category)
-          }
-
-          if (edge.node.frontmatter.type === 'post') {
+          if (edge.node.frontmatter.type === 'docs') {
             createPage({
               path: edge.node.fields.slug,
               component: perposalPage,

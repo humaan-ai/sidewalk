@@ -9,15 +9,6 @@ import "./proposal.css"
 
 export default class ProposalTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pathContext
-    const postNode = this.props.data.postBySlug
-    const post = postNode.frontmatter
-    if (!post.id) {
-      post.id = slug
-    }
-    if (!post.id) {
-      post.category_id = config.postDefaultCategoryID
-    }
     return (
       <div>
         <Header siteTitle="Sidewalk" />
@@ -34,7 +25,7 @@ export default class ProposalTemplate extends React.Component {
             padding: 20,
           }}
           >
-            <TableOfContents chapters={this.props.data.tableOfContents.chapters} />
+            <TableOfContents contents={this.props.data.tableOfContents.contents} />
           </div>
           <div style={{
             marginLeft: `390px`,
@@ -42,6 +33,7 @@ export default class ProposalTemplate extends React.Component {
             padding: `4.25rem 3.75rem`,
           }}
           >
+            Content
           </div>
         </div>
         <Footer />
@@ -52,66 +44,15 @@ export default class ProposalTemplate extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query LessonBySlug($slug: String!) {
-    postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        cover
-        date
-        category
-        tags
-      }
-    }
-    tableOfContents: lessonsJson {
-      chapters {
-        title
-        entries {
-          entry {
-            id
-            childMarkdownRemark {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-        chapters {
+  query Proposal {
+    tableOfContents: proposalJson {
+      id
+      contents {
+        chapter
+        source
+        sections {
           title
-          entries {
-            entry {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-          chapters {
-            title
-            entries {
-              entry {
-                id
-                childMarkdownRemark {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                  }
-                }
-              }
-            }
-          }
+          source
         }
       }
     }

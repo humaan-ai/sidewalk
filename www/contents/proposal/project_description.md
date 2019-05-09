@@ -1,5 +1,6 @@
 ---
-title: "Lesson Two"
+title: "Project Description"
+type: "proposal"
 ---
 
 
