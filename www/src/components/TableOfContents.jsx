@@ -5,13 +5,13 @@ import styled from 'styled-components'
 const ChapterList = ({ chapter, source, sections, level = 0 }) => (
   <ChapterListItem>
     {chapter && (
-      <Link to={source} activeStyle={{ color: "#ecba28" }}>{chapter}</Link>
+      <Link to={source} activeStyle={{ color: "#ffcf2b" }}>{chapter}</Link>
     )}
     {sections && (
         <ul style={{marginBottom: `calc(1.45rem / 2)`}}>
           {sections.map((section, index) => (
               <li key={index}>
-                <Link to={section.source} activeStyle={{ color: "#ecba28" }}>{section.title}</Link>
+                <Link to={section.source} activeStyle={{ color: "#ffcf2b" }}>{section.title}</Link>
               </li>
           ))}
         </ul>

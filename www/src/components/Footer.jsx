@@ -7,6 +7,7 @@ const Footer = () => (
             padding: `1rem 2rem`, 
             height: `50`,
             flexShrink: 0,
+            textAlign: `center`
             }}
     >
         © {new Date().getFullYear()}, Sidewalk |
