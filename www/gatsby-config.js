@@ -3,10 +3,12 @@ const path = require('path')
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 module.exports = {
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: `Sidewalk`,
     description: `The sidewalk analytics by using image processing.`,
     author: `@humaan-ai`,
+    siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [
     `gatsby-plugin-lodash`,

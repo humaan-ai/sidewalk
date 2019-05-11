@@ -35,8 +35,8 @@ const Header = ({ siteTitle }) => (
     </div>
     <nav className="nav">
       <ul>
-        <li><Link to="/proposal/project-summary">Proposal</Link></li>
-        <li><Link to="/contribute">Contribute</Link></li>
+        <li><Link to="proposal/project-summary">Proposal</Link></li>
+        <li><Link to="contribute">Contribute</Link></li>
       </ul>
     </nav>
   </header>
